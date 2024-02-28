@@ -4,6 +4,7 @@ from flask_basicauth import BasicAuth
 from textblob import TextBlob
 from sklearn.linear_model import LinearRegression
 import pickle
+import os
 
 # treinamento do modelo
 # so vai ser executado uma vez ao lançar o app
@@ -17,8 +18,8 @@ app = Flask(__name__) # cria o app
 # e facilita para o flask encontrar os recursos dessa aplicacao
 
 # autenticacao basica da API
-app.config['BASIC_AUTH_USERNAME'] = 'julio'
-app.config['BASIC_AUTH_PASSWORD'] = 'alura'
+app.config['BASIC_AUTH_USERNAME'] = os.environ.get('BASIC_AUTH_USERNAME')
+app.config['BASIC_AUTH_PASSWORD'] = os.environ.get('BASIC_AUTH_PASSWORD')
 
 basic_autentication = BasicAuth(app) # precisamos colocar a autenticacao a cada endpoint
 
