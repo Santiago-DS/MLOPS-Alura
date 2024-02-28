@@ -53,5 +53,5 @@ def cotacao():
     # é interessante devolver o dado no formato jason também, já que o desenvolver pode trabalhar em cima do resultado do modelo
     # antes de servir ao usuário
     return jsonify(preco=preco[0])
-app.run(debug=True) # roda o aplicativo quando o código é executado
+app.run(debug=True, host='0.0.0.0') # roda o aplicativo quando o código é executado
 # quando o debug esta ON, o flask vai restartar a aplicacao automaticamente
