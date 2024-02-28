@@ -8,7 +8,7 @@ import pickle
 # treinamento do modelo
 # so vai ser executado uma vez ao lançar o app
 colunas = ['tamanho', 'ano', 'garagem'] # vamos usar variavel para garantir que as colunas sigam a ordem correta
-modelo = pickle.load(open('modelo.sav', 'rb'))
+modelo = pickle.load(open(r'../../models/modelo.sav', 'rb'))
 
 
 app = Flask(__name__) # cria o app
