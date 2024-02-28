@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify#  request irá servir para pegar o pay
 from flask_basicauth import BasicAuth
 from textblob import TextBlob
 from sklearn.linear_model import LinearRegression
-import picklez
+import pickle
 
 # treinamento do modelo
 # so vai ser executado uma vez ao lançar o app
