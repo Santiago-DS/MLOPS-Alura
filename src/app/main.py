@@ -12,7 +12,7 @@ modelo = pickle.load(open('modelo.sav', 'rb'))
 
 
 app = Flask(__name__) # cria o app
-# é uma boa pratica passar a variavel especial do python __name_
+# e uma boa pratica passar a variavel especial do python __name_
 # assim fica mais de saber onde essa aplicacao esta rodando
 # e facilita para o flask encontrar os recursos dessa aplicacao
 
@@ -31,7 +31,7 @@ def home(): # o que deve ser feito quando o usuario chegar nessa rota
 # vamos criar um endpoint para nosso modelo
 @app.route('/sentimento/<frase>') 
 @basic_autentication.required # identificando que para esse endpoint, precisa de autenticacao
-# esse endpoint recebe uma frase do usuário e retorna a polaridade (sentimento)
+# esse endpoint recebe uma frase do usuario e retorna a polaridade (sentimento)
 # o valor da frase está sendo passado na URL
 def sentimento(frase):
     frase = frase
